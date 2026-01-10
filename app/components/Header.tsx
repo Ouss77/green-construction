@@ -1,16 +1,16 @@
 import React from 'react';
-
+import Image from 'next/image';
 const Header = () => (
-  <header className="w-full bg-white shadow-sm sticky top-0 z-50">
+  <header className="w-full relative shadow-sm z-50" style={{ minHeight: '80px', background: 'transparent' }}>
     <nav className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
       <div className="flex items-center gap-8">
-        <a href="#" className="text-2xl font-bold tracking-tight text-gray-900">LOGO</a>
-        <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <li><a href="#" className="hover:text-green-700">Accueil</a></li>
-          <li><a href="#solutions" className="hover:text-green-700">Solutions</a></li>
-          <li><a href="#realisations" className="hover:text-green-700">Réalisations</a></li>
-          <li><a href="#actualites" className="hover:text-green-700">Actualités</a></li>
-          <li><a href="#about" className="hover:text-green-700">À Propos</a></li>
+         <Image src="/logo.png" alt="Green Construction Logo" width={80} height={30} />   
+        <ul className="hidden md:flex gap-6 text-white font-medium">
+          <li><a href="#" className="hover:text-green-300">Accueil</a></li>
+          <li><a href="#solutions" className="hover:text-green-300">Solutions</a></li>
+          <li><a href="#realisations" className="hover:text-green-300">Réalisations</a></li>
+          <li><a href="#actualites" className="hover:text-green-300">Actualités</a></li>
+          <li><a href="#about" className="hover:text-green-300">À Propos</a></li>
         </ul>
       </div>
       <div className="flex gap-2">

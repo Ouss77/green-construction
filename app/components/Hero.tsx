@@ -2,18 +2,10 @@
 const Hero = () => (
   <section
     className="relative w-full h-[600px] flex items-center justify-center text-white"
-    style={{ minHeight: '500px' }}
+    style={{ minHeight: '500px', background: 'transparent' }}
     aria-label="Hero section with solar panels background"
   >
-    <img
-      src="/hero.webp"
-      alt="Solar panels at sunset"
-      className="absolute w-full h-full object-cover object-center z-0"
-    //   style={{ filter: 'brightness(0.99)' }}
-      loading="eager"
-    />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 z-10" aria-hidden="true"></div>
-    <div className="relative z-20 w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
+    <div className="relative w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
       <h1 className="text-3xl md:text-5xl font-bold mb-2 leading-tight">
         Solutions solaires photovoltaïques<br />
         <span className="text-green-300">pour entreprises & collectivités</span>

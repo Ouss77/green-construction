@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
           {/* CEO BLOCK */}
           <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm max-w-md">
             <Image
-              src="/ceo.png"
+              src="/ceo.jpg"
               alt="Pierre Martin CEO"
               width={60}
               height={60}
@@ -43,12 +43,12 @@ export default function WhyChooseUs() {
         <div className="bg-white rounded-2xl shadow-lg p-8">
 
           {/* CERTIFICATION LOGOS */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+          {/* <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <Image src="/logos/tuv.png" alt="TÜV Rheinland" width={90} height={40} />
             <Image src="/logos/qualipv.png" alt="QualiPV" width={90} height={40} />
             <Image src="/logos/irve.png" alt="IRVE" width={70} height={40} />
             <Image src="/logos/ademe.png" alt="ADEME" width={90} height={40} />
-          </div>
+          </div> */}
 
           {/* FEATURES */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

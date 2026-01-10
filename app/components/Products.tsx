@@ -2,25 +2,25 @@ import React from 'react';
 
 const products = [
   {
-    img: '/product-pv.jpg',
+    img: '/paneau.webp',
     title: 'Panneaux Photovoltaïques',
     desc: 'Connaissance du produit, offre selon cahiers des charges. Prêts-pour-montage, contrats terminaux.',
     link: '#',
   },
   {
-    img: '/product-onduleur.jpg',
+    img: '/paneau.webp',
     title: 'Onduleurs',
     desc: 'Conducteur clé du produit. Délai rapides. Prêts-pour-montage, contrats terminaux.',
     link: '#',
   },
   {
-    img: '/product-batterie.jpg',
+    img: '/paneau.webp',
     title: 'Batteries de Stockage',
     desc: 'Conducteur clé des grilles d’équipements. Prêts-pour-montage, contrats terminaux.',
     link: '#',
   },
   {
-    img: '/product-kit.jpg',
+    img: '/paneau.webp',
     title: 'Kit Solaire Clé en Main',
     desc: 'Conducteur clé, “clés en main” d’achats. Prêts-pour-montage, contrats terminaux.',
     link: '#',
@@ -30,6 +30,7 @@ const products = [
 const Products = () => (
   <section className="bg-white py-10">
     <div className="max-w-6xl mx-auto px-4">
+      <h2 className="text-4xl font-bold text-center mb-10 text-green-700">Nos Produits</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {products.map((item, idx) => (
           <div key={idx} className="bg-white rounded-lg shadow p-0 border border-gray-100 flex flex-col">

@@ -2,17 +2,17 @@ import React from 'react';
 
 const projects = [
   {
-    img: '/project-afrique.jpg',
+    img: '/realisation.jpeg',
     title: 'Parc Solaire en Afrique',
     link: '#',
   },
   {
-    img: '/project-france.jpg',
+    img: '/realisation.jpeg',
     title: 'Toit Industriel en France',
     link: '#',
   },
   {
-    img: '/project-commune.jpg',
+    img: '/realisation.jpeg',
     title: 'Installation Communale',
     link: '#',
   },
@@ -21,7 +21,7 @@ const projects = [
 const Projects = () => (
   <section className="bg-gray-100 py-12" id="realisations">
     <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Nos Réalisations</h2>
+      <h2 className="text-4xl font-bold text-center mb-10 text-green-700">Nos Réalisations</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((item, idx) => (
           <div key={idx} className="bg-white rounded-lg shadow border border-gray-100 overflow-hidden group">
