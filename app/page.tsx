@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-const Header = dynamic(() => import("./components/Header"));
+import Header from "./components/Header";
 const Hero = dynamic(() => import("./components/Hero"));
 const Expertise = dynamic(() => import("./components/Expertise"));
 const Stats = dynamic(() => import("./components/Stats"));
