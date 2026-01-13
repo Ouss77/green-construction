@@ -18,7 +18,7 @@ const links = [
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
-  const [openSub, setOpenSub] = useState(null);
+  const [openSub, setOpenSub] = useState<string | null>(null);
 
   return (
     <div className="md:hidden">
