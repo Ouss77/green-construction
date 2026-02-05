@@ -428,19 +428,19 @@ export default function Solutions() {
                             
                             {/* Specifications */}
                             <div className="space-y-2 mb-4">
-                              {product.power && (
+                              {"power" in product && product.power && (
                                 <div className="flex justify-between text-sm">
                                   <span className="text-gray-500">Puissance</span>
                                   <span className="font-semibold">{product.power}</span>
                                 </div>
                               )}
-                              {product.efficiency && (
+                              {"efficiency" in product && product.efficiency && (
                                 <div className="flex justify-between text-sm">
                                   <span className="text-gray-500">Efficacité</span>
                                   <span className="font-semibold">{product.efficiency}</span>
                                 </div>
                               )}
-                              {product.warranty && (
+                              {"warranty" in product && product.warranty && (
                                 <div className="flex justify-between text-sm">
                                   <span className="text-gray-500">Garantie</span>
                                   <span className="font-semibold text-green-600">{product.warranty}</span>

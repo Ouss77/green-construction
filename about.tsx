@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+import Header from "./app/components/Header";
 import {   FaLeaf,   FaHandshake,   FaTools,   FaGlobeEurope,  FaUsers,  FaLightbulb,  FaChartLine,  FaAward,  FaShieldAlt,  FaHeart,  FaArrowRight,  FaBuilding,  FaSeedling,  FaRecycle,  FaRocket,  FaBullseye} from "react-icons/fa";
 import { FiTarget, FiCheckCircle, FiStar, FiTrendingUp } from "react-icons/fi";
-import Footer from "../components/Footer";
+import Footer from "./app/components/Footer";
 
 export default function About() {
   return (
