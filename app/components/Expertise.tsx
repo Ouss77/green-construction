@@ -1,52 +1,99 @@
 import React from 'react';
 
-const expertise = [
-  {
-    icon: (
-      <svg className="w-10 h-10 text-green-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 20l9-5-9-5-9 5 9 5z" /><path d="M12 12V4l9 5-9 5-9-5 9-5z" /></svg>
-    ),
-    title: 'Étude & Conseil',
-    desc: 'Formulation de produits. Délai rapides. Prêts-pour-montage, contrats terminaux.',
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-green-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M16 3v4M8 3v4" /></svg>
-    ),
-    title: 'Fourniture de Matériel',
-    desc: 'Constitution de kits prédéfinis. Délai rapides. Prêts-pour-montage, contrats terminaux.',
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-green-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2" /><path d="M16 3v4M8 3v4" /></svg>
-    ),
-    title: 'Kits Solaires Sur Mesure',
-    desc: 'Constitution de kits spécifiques. Délai rapides. Prêts-pour-montage, contrats terminaux.',
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-green-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M17 16l4-4-4-4M7 8l-4 4 4 4" /></svg>
-    ),
-    title: 'Suivi & Maintenance',
-    desc: 'Suivi de projets. Délai rapides. Prêts-pour-montage, contrats terminaux.',
-  },
-];
-
+import { FaChartLine, FaCog, FaHandshake, FaLightbulb, FaCheckCircle } from "react-icons/fa";
+import { FiZap } from 'react-icons/fi';
 const Expertise = () => (
-  <section className="bg-white py-12" id="expertise">
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-4xl font-bold text-center mb-10 text-green-700">Nos Expertises</h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {expertise.map((item, idx) => (
-          <div key={idx} className="bg-gray-50 rounded-lg shadow p-6 flex flex-col items-center text-center border border-gray-100">
-            <div className="mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-            <p className="text-gray-600 mb-4">{item.desc}</p>
-            <a href="#" className="mt-auto inline-block bg-green-700 text-white px-5 py-2 rounded font-medium hover:bg-green-800 transition">En savoir plus</a>
+<>
+{/* NOS EXPERTISES - AMÉLIORÉ */}
+      <section className="bg-gray-50 py-16 md:py-24" id="expertise">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="p-2 bg-green-100 rounded-lg">
+                <FaLightbulb className="text-green-600" />
+              </div>
+              <span className="font-semibold text-green-600 uppercase tracking-wide text-xs">
+                Notre Savoir-Faire
+              </span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Nos <span className="text-green-600">Expertises</span> Solaires
+            </h2>
+            
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+              Un accompagnement complet, de l'étude initiale à la maintenance, 
+              pour vos projets photovoltaïques.
+            </p>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <FaChartLine className="text-2xl" />,
+                title: 'Étude & Conseil',
+                description: 'Analyse de faisabilité, dimensionnement optimisé et conseils stratégiques pour vos projets solaires.',
+                features: ['Étude de rentabilité', 'Dimensionnement précis', 'Planification stratégique'],
+                gradient: 'from-blue-500 to-cyan-500'
+              },
+              {
+                icon: <FaCog className="text-2xl" />,
+                title: 'Fourniture de Matériel',
+                description: 'Matériel photovoltaïque certifié et kits prêts-à-installer pour tous types de projets.',
+                features: ['Panneaux certifiés', 'Onduleurs performants', 'Accessoires complets'],
+                gradient: 'from-green-500 to-emerald-500'
+              },
+              {
+                icon: <FiZap className="text-2xl" />,
+                title: 'Kits Solaires Sur Mesure',
+                description: 'Solutions clé en main adaptées spécifiquement à vos besoins énergétiques.',
+                features: ['Personnalisation totale', 'Intégration batterie', 'Monitoring inclus'],
+                gradient: 'from-amber-500 to-orange-500'
+              },
+              {
+                icon: <FaHandshake className="text-2xl" />,
+                title: 'Suivi & Maintenance',
+                description: 'Accompagnement post-installation et maintenance préventive pour une performance optimale.',
+                features: ['Monitoring 24/7', 'Maintenance préventive', 'Support technique'],
+                gradient: 'from-purple-500 to-pink-500'
+              }
+            ].map((expertise, idx) => (
+              <div 
+                key={idx} 
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+              >
+                <div className={`h-2 bg-gradient-to-r ${expertise.gradient} rounded-t-xl`}></div>
+                <div className="p-6">
+                  <div className={`w-14 h-14 bg-gradient-to-r ${expertise.gradient} rounded-lg flex items-center justify-center text-white mb-6`}>
+                    {expertise.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                    {expertise.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {expertise.description}
+                  </p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {expertise.features.map((feature, featIdx) => (
+                      <li key={featIdx} className="flex items-center gap-2 text-sm text-gray-700">
+                        <FaCheckCircle className="text-green-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className="w-full text-center text-green-600 hover:text-green-700 font-semibold text-sm py-3 border border-green-200 rounded-lg hover:bg-green-50 transition-colors">
+                    Découvrir cette expertise
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section></>
 );
 
 export default Expertise;

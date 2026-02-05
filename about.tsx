@@ -263,6 +263,27 @@ export default function About() {
                   description: "Nous combinons savoir-faire traditionnel et innovations de pointe pour des résultats exceptionnels.",
                   color: "from-amber-500 to-orange-500",
                   metrics: ["15 certifications", "0 défaut majeur", "100% conformité"]
+                },
+                {
+                  icon: <FaLightbulb className="text-3xl" />,
+                  title: "Innovation permanente",
+                  description: "Nous investissons continuellement dans la R&D pour anticiper et façonner l'avenir de la construction.",
+                  color: "from-purple-500 to-pink-500",
+                  metrics: ["5 brevets déposés", "12 innovations/an", "3 laboratoires R&D"]
+                },
+                {
+                  icon: <FaUsers className="text-3xl" />,
+                  title: "Collaboration constructive",
+                  description: "Nous croyons en la force du collectif et travaillons main dans la main avec nos clients.",
+                  color: "from-teal-500 to-green-500",
+                  metrics: ["50+ partenaires", "100% satisfaction", "Co-construction"]
+                },
+                {
+                  icon: <FaShieldAlt className="text-3xl" />,
+                  title: "Responsabilité intégrale",
+                  description: "Nous assumons l'entière responsabilité de nos réalisations, de la conception au suivi.",
+                  color: "from-indigo-500 to-blue-500",
+                  metrics: ["10 ans garantie", "24/7 support", "Suivi post-projet"]
                 }
               ].map((value, index) => (
                 <div
@@ -379,6 +400,95 @@ export default function About() {
                   <div className="text-center">
                     <div className="font-bold text-lg">100%</div>
                     <div className="text-green-200">Équipe formée RSE</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* TEAM SECTION */}
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-6">
+                <div className="p-2 bg-green-100 rounded-lg">
+                  <FaUsers className="text-green-600" />
+                </div>
+                <span className="font-semibold text-green-600 uppercase tracking-wide text-sm">
+                  Notre Équipe
+                </span>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Une équipe de <span className="text-green-600">passionnés</span>
+              </h2>
+              
+              <div className="space-y-6">
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Fondée par trois ingénieurs visionnaires en 2015, Green Construction 
+                  rassemble aujourd'hui une équipe pluridisciplinaire de <strong>35 experts</strong> 
+                  dédiés à la construction durable.
+                </p>
+                
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Architectes, ingénieurs thermiciens, chefs de projet et experts 
+                  environnementaux travaillent en synergie pour transformer vos 
+                  visions en réalités concrètes.
+                </p>
+              </div>
+              
+              {/* Team badges */}
+              <div className="mt-10 flex flex-wrap gap-4">
+                {[
+                  { label: "🌱 100% engagés RSE", color: "bg-green-100 text-green-700" },
+                  { label: "🎓 Formation continue", color: "bg-blue-100 text-blue-700" },
+                  { label: "🤝 Partenariats locaux", color: "bg-amber-100 text-amber-700" },
+                  { label: "🏆 Excellence reconnue", color: "bg-purple-100 text-purple-700" }
+                ].map((badge, index) => (
+                  <div key={index} className={`px-4 py-2 rounded-full font-medium ${badge.color}`}>
+                    {badge.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              {/* Team composition */}
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                {[
+                  { title: "Architectes & Designers", count: "8", color: "from-green-500 to-emerald-500" },
+                  { title: "Ingénieurs Spécialisés", count: "12", color: "from-blue-500 to-cyan-500" },
+                  { title: "Chefs de Projet", count: "7", color: "from-amber-500 to-orange-500" },
+                  { title: "Experts Support", count: "8", color: "from-purple-500 to-pink-500" }
+                ].map((team, index) => (
+                  <div 
+                    key={index} 
+                    className="p-6 rounded-2xl bg-white shadow-lg text-center hover:shadow-xl transition-shadow"
+                  >
+                    <div className={`text-3xl font-bold mb-2 bg-gradient-to-r ${team.color} bg-clip-text text-transparent`}>
+                      {team.count}
+                    </div>
+                    <div className="font-medium text-gray-700">{team.title}</div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Quote */}
+              <div className="relative bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <FaHeart className="text-white text-sm" />
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl text-green-300 leading-none">"</div>
+                  <div>
+                    <p className="text-gray-700 italic mb-4 leading-relaxed">
+                      Chaque bâtiment que nous concevons est une promesse pour 
+                      les générations futures. Notre mission va bien au-delà 
+                      de la construction : nous créons des héritages durables.
+                    </p>
+                    <div>
+                      <div className="font-bold text-green-600">Pierre Martin</div>
+                      <div className="text-sm text-gray-500">Fondateur & CEO</div>
+                    </div>
                   </div>
                 </div>
               </div>

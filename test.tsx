@@ -14,10 +14,10 @@ export default function Contact() {
   return (
     <>
       {/* HERO SECTION WITH NAVBAR INSIDE */}
-      <section className="relative h-[70vh]  w-full overflow-hidden">
+      <section className="relative h-[65vh] min-h-[200px] w-full overflow-hidden">
         {/* Background image */}
         <img
-          src="/cover.jpg"
+          src="/herocont.png"
           alt="Bâtiment écologique moderne"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

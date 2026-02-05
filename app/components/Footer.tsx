@@ -6,7 +6,7 @@ const Footer = () => (
 
     {/* Background Image */}
     <Image
-      src="/footer.webp"
+      src="/hero1.jpg"
       alt="Green construction background"
       fill
       className="object-cover object-center"
