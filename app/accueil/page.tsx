@@ -12,22 +12,14 @@ export default function Accueil() {
   return (
     <div>
       <div className="relative w-full" style={{ minHeight: "680px" }}>
-        <img
-          src="/hero.webp"
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover object-center z-0"
-          style={{ minHeight: "680px" }}
-        />
-        <div  className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10 z-10"  aria-hidden="true"
-        ></div>
         <Header />
         <Hero />
       </div>
       <main>
         <WhyChooseUs />
-        <Expertise />
+        {/* <Expertise /> */}
         <Stats />
-        <Products />
+        {/* <Products /> */}
         <Projects />
       </main>
       <PartnerLogos />

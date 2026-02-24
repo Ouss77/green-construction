@@ -9,6 +9,7 @@ import {
   FaBuilding,
 } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
@@ -268,80 +269,9 @@ export default function Contact() {
             </div>
           </section>
 
-          {/* ÉQUIPE */}
-          <section className="text-center">
-            <div className="max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Notre équipe d'experts
-              </h2>
-              <p className="text-gray-600 text-lg">
-                Rencontrez les spécialistes qui transformeront votre vision en réalité.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { 
-                  name: "Sophie Martin", 
-                  role: "Responsable projet", 
-                  img: "/team1.jpg",
-                  expertise: "Gestion de projets durables",
-                  color: "bg-gradient-to-br from-blue-500 to-cyan-500"
-                },
-                { 
-                  name: "Ali Benyamina", 
-                  role: "Architecte", 
-                  img: "/team2.jpg",
-                  expertise: "Design écologique",
-                  color: "bg-gradient-to-br from-green-500 to-emerald-500"
-                },
-                { 
-                  name: "Julie Dubois", 
-                  role: "Support client", 
-                  img: "/team3.jpg",
-                  expertise: "Accompagnement personnalisé",
-                  color: "bg-gradient-to-br from-amber-500 to-orange-500"
-                },
-              ].map((m, i) => (
-                <div
-                  key={i}
-                  className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <div className={`absolute inset-0 ${m.color} opacity-20`}></div>
-                    <img
-                      src={m.img}
-                      alt={m.name}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-                    
-                    {/* Badge de rôle */}
-                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                      <span className="text-sm font-medium text-gray-800">{m.role}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl text-gray-800 mb-1">
-                      {m.name}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4">
-                      {m.expertise}
-                    </p>
-                    
-                    <a
-                      href={`mailto:${m.name.toLowerCase().replace(' ', '.')}@greenconstruction.fr`}
-                      className="inline-block text-green-600 font-medium hover:text-green-700 transition-colors"
-                    >
-                      Contacter {m.name.split(' ')[0]}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
         </div>
+        <Footer />
       </main>
     </>
   );

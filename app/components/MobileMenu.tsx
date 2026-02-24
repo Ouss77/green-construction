@@ -3,22 +3,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/about", label: "À Propos" },
   { href: "/solutions", label: "Solutions", sub: [
-    { href: "/solutions/kits", label: "Kits sélectionnés (sans prix)" },
-    { href: "/solutions/fourniture", label: "Fourniture matériel PV" },
-    { href: "/solutions/etudes", label: "Études" },
+    { href: "/produits", label: "Produits" },
+    { href: "/conseils", label: "Conseils" },
   ] },
   { href: "/realisations", label: "Réalisations" },
   { href: "/actualites", label: "Actualités" },
+  { href: "/prestataires", label: "Prestataires" },
+  { href: "/demande-etude", label: "Demande d’étude" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [openSub, setOpenSub] = useState<string | null>(null);
+  const pathname = usePathname();
 
   return (
     <div className="md:hidden">
@@ -26,7 +29,7 @@ export default function MobileMenu() {
       <button
         onClick={() => setOpen(!open)}
         aria-label="Ouvrir le menu"
-        className="text-white focus:outline-none"
+        className="text-gray-800 focus:outline-none"
       >
         <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2">
           <line x1="4" y1="7" x2="24" y2="7" />
@@ -59,7 +62,11 @@ export default function MobileMenu() {
               {link.sub ? (
                 <>
                   <button
-                    className="w-full text-left flex items-center justify-between hover:text-green-200 focus:outline-none px-2 py-2 rounded transition-colors bg-white/5"
+                    className={`w-full text-left flex items-center justify-between focus:outline-none px-2 py-2 rounded transition-colors ${
+                      pathname === "/solutions" || pathname === "/produits" || pathname === "/conseils"
+                        ? "text-green-200 bg-white/10"
+                        : "hover:text-green-200 bg-white/5"
+                    }`}
                     onClick={() => setOpenSub(openSub === link.href ? null : link.href)}
                   >
                     {link.label}
@@ -72,7 +79,7 @@ export default function MobileMenu() {
                           <Link
                             href={sublink.href}
                             onClick={() => { setOpen(false); setOpenSub(null); }}
-                            className="block px-6 py-3 hover:bg-green-50 hover:text-green-700 font-medium transition"
+                            className={`block px-6 py-3 hover:bg-green-50 hover:text-green-700 font-medium transition ${pathname === sublink.href ? "text-green-700 bg-green-50" : ""}`}
                           >
                             {sublink.label}
                           </Link>
@@ -85,7 +92,7 @@ export default function MobileMenu() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="hover:text-green-300"
+                  className={pathname === link.href ? "text-green-300" : "hover:text-green-300"}
                 >
                   {link.label}
                 </Link>

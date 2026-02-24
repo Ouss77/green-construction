@@ -3,34 +3,30 @@ import { FiTarget } from "react-icons/fi";
 
 const Hero = () => (
       <section className="relative min-h-[90vh] bg-transparent text-white overflow-hidden pt-24">
-        {/* Background overlay avec effet de grille solaire */}
-        <div className="absolute inset-0 z-10">
-          <div className="absolute inset-0 bg-linear-to-br from-green-900/40 via-emerald-900/30 to-teal-900/20"></div>
-          <div className="absolute top-0 left-0 w-full h-full opacity-10">
-            <div className="grid grid-cols-8 gap-2 p-4">
-              {[...Array(64)].map((_, i) => (
-                <div key={i} className="aspect-square border border-emerald-500/30 rounded-sm"></div>
-              ))}
-            </div>
-          </div>
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="/heroo.mp4" type="video/mp4" />
+        </video>
+
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <div className="absolute inset-0 bg-linear-to-b from-black/45 via-black/35 to-black/45" />
+          <div className="absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-black/20 to-black/55" />
         </div>
          
         {/* Contenu Hero */}
         <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Badge d'expertise */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
-              <div className="p-1.5 bg-green-500/20 rounded-full">
-                <FaSun className="text-amber-300 text-sm" />
-              </div>
-              <span className="text-xs font-medium text-green-100 tracking-wide">
-                Expert Solaire Photovoltaïque B2B
-              </span>
-            </div>
             
             {/* Titre principal */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-linear-to-r from-amber-300 via-green-300 to-emerald-300 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 mt-5 leading-tight">
+              <span className="bg-linear-to-r from-amber-200 via-orange-200 to-yellow-100 bg-clip-text text-transparent">
                 Solutions Solaires
               </span>
               <br />
@@ -49,15 +45,15 @@ const Hero = () => (
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <span className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/20">
                 <FaBuilding className="inline mr-2" />
-                B2B & Collectivités
+                Administration
               </span>
               <span className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/20">
                 <FaLightbulb className="inline mr-2" />
-                Expertise & Conseil
+                Entreprise
               </span>
               <span className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/20">
                 <FaCheckCircle className="inline mr-2" />
-                Installateurs Certifiés
+                Collectivité
               </span>
             </div>
             
@@ -65,7 +61,7 @@ const Hero = () => (
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-green-500/30"
+                className="group inline-flex items-center justify-center gap-3 bg-white text-slate-900 hover:bg-slate-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <FiTarget />
                 <span>Demander une étude gratuite</span>
@@ -89,7 +85,7 @@ const Hero = () => (
                 { value: "500+", label: "Projets" }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-xl font-bold text-green-300">{stat.value}</div>
+                  <div className="text-xl font-bold text-amber-200">{stat.value}</div>
                   <div className="text-xs text-gray-400">{stat.label}</div>
                 </div>
               ))}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { FaChartLine, FaCog, FaHandshake, FaLightbulb, FaCheckCircle } from "react-icons/fa";
 import { FiZap } from 'react-icons/fi';
 const Expertise = () => (
